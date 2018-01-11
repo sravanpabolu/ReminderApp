@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reminders</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+
+	<a href="PatientDataForm.html"> Create New Data </a>
+	
+	<hr>
+	<div ng-app="ReminderApp" ng-controller="SummaryController">
+		<!-- <hr>
+		Total Data from JSON: {{ babyDataSummary }}
+		<hr> -->
+		<h4> Available Data </h4>
+		<table border="true">
+			<tr>
+				<th> S.No </th>
+				<th> Baby Name </th>
+				<th> Gender </th>
+				<th> Date of Birth </th>
+				<th> Mother Name </th>
+				<th> Address </th>
+				<th> Last Vaccine Date </th>
+				<th> Next Vaccine Date</th>
+			</tr>
+			<tr ng-repeat="aBabyModel in babyDataSummary">
+				<td> {{ $index + 1 }} </td>
+				<td> {{ aBabyModel.BabyName }} </td>
+				<td> {{ aBabyModel.BabyGender }} </td>
+				<td> {{ aBabyModel.BabyDOB }} </td>
+				<td> {{ aBabyModel.MotherName }} </td>
+				<td> {{ aBabyModel.Address }} </td>
+				<td> {{ aBabyModel.LastVaccineDate }} </td>
+				<td> {{ aBabyModel.NextVaccineDate }} </td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
