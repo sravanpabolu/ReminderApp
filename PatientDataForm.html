@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Patient Data Form</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </head>
-<body>
-	<div>
+<body ng-app="ReminderApp">
+	<div ng-controller="PatientDataFormController">
 		<table>
 			<tr>
 				<td> Baby Name: </td>
@@ -36,7 +38,7 @@
 			</tr>
 			<tr>
 				<td> </td>
-				<td> <input type="Submit">
+				<td> <input type="Submit" ng-click="exportToFile()">
 			</tr>
 		</table>
 	</div>
